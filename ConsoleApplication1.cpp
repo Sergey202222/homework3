@@ -7,19 +7,39 @@ int main()
 	std::cout << "Оператор: ";
 	std::string Operator{};
 	std::cin >> Operator;
+	bool booleanAlgebra1{ true }, booleanAlgebra2{ true }, booleanAlgebra3{};
+	std::cout << std::boolalpha;
 	if (Operator == "||")
 	{
-		std::cout << "true    true    true\n"
-					 "false   true    true\n"
-					 "true    false   true\n"
-				     "false   false   false";
+		booleanAlgebra3 = booleanAlgebra1 || booleanAlgebra2;
+		std::cout << booleanAlgebra1 << ' ' << booleanAlgebra2 << ' ' << booleanAlgebra3 << '\n';
+		booleanAlgebra1 = false;
+		booleanAlgebra3 = booleanAlgebra1 || booleanAlgebra2;
+		std::cout << booleanAlgebra1 << ' ' << booleanAlgebra2 << ' ' << booleanAlgebra3 << '\n';
+		booleanAlgebra1 = true;
+		booleanAlgebra2 = false;
+		booleanAlgebra3 = booleanAlgebra1 || booleanAlgebra2;
+		std::cout << booleanAlgebra1 << ' ' << booleanAlgebra2 << ' ' << booleanAlgebra3 << '\n';
+		booleanAlgebra1 = false;
+		booleanAlgebra2 = false;
+		booleanAlgebra3 = booleanAlgebra1 || booleanAlgebra2;
+		std::cout << booleanAlgebra1 << ' ' << booleanAlgebra2 << ' ' << booleanAlgebra3 << '\n';
 	}
 	else if (Operator == "&&")
 	{
-		std::cout << "true    true    true\n"
-					 "false   true    false\n"
-					 "true    false   false\n"
-					 "false   false   false";
+		booleanAlgebra3 = booleanAlgebra1 && booleanAlgebra2;
+		std::cout << booleanAlgebra1 << ' ' << booleanAlgebra2 << ' ' << booleanAlgebra3 << '\n';
+		booleanAlgebra1 = false;
+		booleanAlgebra3 = booleanAlgebra1 && booleanAlgebra2;
+		std::cout << booleanAlgebra1 << ' ' << booleanAlgebra2 << ' ' << booleanAlgebra3 << '\n';
+		booleanAlgebra1 = true;
+		booleanAlgebra2 = false;
+		booleanAlgebra3 = booleanAlgebra1 && booleanAlgebra2;
+		std::cout << booleanAlgebra1 << ' ' << booleanAlgebra2 << ' ' << booleanAlgebra3 << '\n';
+		booleanAlgebra1 = false;
+		booleanAlgebra2 = false;
+		booleanAlgebra3 = booleanAlgebra1 && booleanAlgebra2;
+		std::cout << booleanAlgebra1 << ' ' << booleanAlgebra2 << ' ' << booleanAlgebra3 << '\n';
 	}
 	return EXIT_SUCCESS;
 }
